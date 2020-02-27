@@ -11,12 +11,13 @@
         <h1>Password Generator</h1>
         <button type="button" class="btn btn-primary">Start</button>
     </section>
-    <section> <!--Selection-->
+    <section> <!--Selections-->
         <h1>Password Generator</h1>
+
         <section>
             <h3>Password Length</h3>
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Length
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -33,44 +34,45 @@
                 </div>
               </div>
         </section>
+
         <section>
             <h3>Capitals</h3>
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input type="radio" name="options" id="option1" checked> Enabled
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2"> Disabled
-                </label>
-            </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">1</a>
-                <a class="dropdown-item" href="#">2</a>
-                <a class="dropdown-item" href="#">3</a>
-                <a class="dropdown-item" href="#">4</a>
-                <a class="dropdown-item" href="#">5</a>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="capital_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Length;
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" onclick="capitalfunc(0)">0</a>
+                  <a class="dropdown-item" onclick="capitalfunc(1)">1</a>
+                  <a class="dropdown-item" onclick="capitalfunc(2)">2</a>
+                  <a class="dropdown-item" onclick="capitalfunc(3)">3</a>
+                  <a class="dropdown-item" onclick="capitalfunc(4)">4</a>
+                  <a class="dropdown-item" onclick="capitalfunc(5)">5</a>
+                </div>
               </div>
         </section>
+
         <section>
             <h3>Special Characters</h3>
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-secondary active">
-                  <input type="radio" name="options" id="option1" checked> Enabled
-                </label>
-                <label class="btn btn-secondary">
-                  <input type="radio" name="options" id="option2"> Disabled
-                </label>
-            </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">1</a>
-                <a class="dropdown-item" href="#">2</a>
-                <a class="dropdown-item" href="#">3</a>
-                <a class="dropdown-item" href="#">4</a>
-                <a class="dropdown-item" href="#">5</a>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Length
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">0</a>
+                    <a class="dropdown-item" href="#">1</a>
+                    <a class="dropdown-item" href="#">2</a>
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5</a>
+                </div>
               </div>
         </section>
+
         <button type="button" class="btn btn-danger">Generate Password</button>
     </section>
+
+
     <script src="generator.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
