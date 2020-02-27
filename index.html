@@ -1,11 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
 </head>
 <body>
-    
+    <section> <!--Welcome-->
+        <h1>Password Generator</h1>
+        <button type="button" class="btn btn-primary">Start</button>
+    </section>
+    <section> <!--Selection-->
+        <h1>Password Generator</h1>
+        <section>
+            <h3>Password Length</h3>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Length
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">4</a>
+                  <a class="dropdown-item" href="#">5</a>
+                  <a class="dropdown-item" href="#">6</a>
+                  <a class="dropdown-item" href="#">7</a>
+                  <a class="dropdown-item" href="#">8</a>
+                  <a class="dropdown-item" href="#">9</a>
+                  <a class="dropdown-item" href="#">10</a>
+                  <a class="dropdown-item" href="#">11</a>
+                  <a class="dropdown-item" href="#">12</a>
+                </div>
+              </div>
+        </section>
+        <section>
+            <h3>Capitals</h3>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1" checked> Enabled
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2"> Disabled
+                </label>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">1</a>
+                <a class="dropdown-item" href="#">2</a>
+                <a class="dropdown-item" href="#">3</a>
+                <a class="dropdown-item" href="#">4</a>
+                <a class="dropdown-item" href="#">5</a>
+              </div>
+        </section>
+        <section>
+            <h3>Special Characters</h3>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                  <input type="radio" name="options" id="option1" checked> Enabled
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="options" id="option2"> Disabled
+                </label>
+            </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">1</a>
+                <a class="dropdown-item" href="#">2</a>
+                <a class="dropdown-item" href="#">3</a>
+                <a class="dropdown-item" href="#">4</a>
+                <a class="dropdown-item" href="#">5</a>
+              </div>
+        </section>
+        <button type="button" class="btn btn-danger">Generate Password</button>
+    </section>
+    <script src="generator.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
