@@ -15,10 +15,16 @@ let letter_array = "abcdefghijklmnopqrstuvwxyz";
 let number_array = "0123456789";
 let special_array = ["\~","\!","\@","\#","\$","\%","\^","\&","\*"];
 
-
-
-function capitalfunc(countVar) {
-    document.getElementById("capital_button").innerHTML = ""+countVar;
-    capital_number = countVar;
+function selectionfunc(countVar, optionchoice) {
+    if (optionchoice === "Capital") {
+        capital_number = countVar;
+        document.getElementById("capital_button").innerHTML = ""+countVar;
+    } else if (optionchoice === "Special") {
+        special_number = countVar;
+        document.getElementById("special_button").innerHTML = ""+countVar;
+    } else {
+        length_number = countVar;
+        document.getElementById("length_button").innerHTML = ""+countVar;
+    }
 }
 
