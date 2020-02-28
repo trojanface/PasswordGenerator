@@ -17,20 +17,20 @@
         <section>
             <h3>Password Length</h3>
             <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Length
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="length_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  6
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">3</a>
-                  <a class="dropdown-item" href="#">4</a>
-                  <a class="dropdown-item" href="#">5</a>
-                  <a class="dropdown-item" href="#">6</a>
-                  <a class="dropdown-item" href="#">7</a>
-                  <a class="dropdown-item" href="#">8</a>
-                  <a class="dropdown-item" href="#">9</a>
-                  <a class="dropdown-item" href="#">10</a>
-                  <a class="dropdown-item" href="#">11</a>
-                  <a class="dropdown-item" href="#">12</a>
+                  <a class="dropdown-item" onclick="selectionfunc(3, 'Length')">3</a>
+                  <a class="dropdown-item" onclick="selectionfunc(4, 'Length')">4</a>
+                  <a class="dropdown-item" onclick="selectionfunc(5, 'Length')">5</a>
+                  <a class="dropdown-item" onclick="selectionfunc(6, 'Length')">6</a>
+                  <a class="dropdown-item" onclick="selectionfunc(7, 'Length')">7</a>
+                  <a class="dropdown-item" onclick="selectionfunc(8, 'Length')">8</a>
+                  <a class="dropdown-item" onclick="selectionfunc(9, 'Length')">9</a>
+                  <a class="dropdown-item" onclick="selectionfunc(10, 'Length')">10</a>
+                  <a class="dropdown-item" onclick="selectionfunc(11, 'Length')">11</a>
+                  <a class="dropdown-item" onclick="selectionfunc(12, 'Length')">12</a>
                 </div>
               </div>
         </section>
@@ -39,7 +39,7 @@
             <h3>Capitals</h3>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="capital_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Length;
+                  2
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" onclick="selectionfunc(0, 'Capital')">0</a>
@@ -56,7 +56,7 @@
             <h3>Special Characters</h3>
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="special_button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Length
+                  1
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" onclick="selectionfunc(0, 'Special')">0</a>
@@ -69,7 +69,7 @@
               </div>
         </section>
 
-        <button type="button" class="btn btn-danger">Generate Password</button>
+        <button type="button" onclick="generate()" class="btn btn-danger">Generate Password</button>
     </section>
 
 

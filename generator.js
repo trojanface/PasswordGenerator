@@ -5,9 +5,9 @@
 
 
 //User options
-let password_length = 3;
-let capital_number = "0";
-let special_number = 0; 
+let password_length = 6;
+let capital_number = 2;
+let special_number = 1; 
 
 //Stored Data
 
@@ -15,6 +15,10 @@ let letter_array = "abcdefghijklmnopqrstuvwxyz";
 let number_array = "0123456789";
 let special_array = ["\~","\!","\@","\#","\$","\%","\^","\&","\*"];
 
+//Password
+let password = "";
+
+//User Input function
 function selectionfunc(countVar, optionchoice) {
     if (optionchoice === "Capital") {
         capital_number = countVar;
@@ -23,8 +27,17 @@ function selectionfunc(countVar, optionchoice) {
         special_number = countVar;
         document.getElementById("special_button").innerHTML = ""+countVar;
     } else {
-        length_number = countVar;
+        password_length = countVar;
         document.getElementById("length_button").innerHTML = ""+countVar;
     }
 }
 
+//Password Generation
+function generate() {
+password = ""; //Clears the password variable.
+for (let i = 0; i < password_length; i++) {
+    password += letter_array[Math.floor(Math.random()*letter_array.length)];
+}
+
+console.log(""+password);
+}
