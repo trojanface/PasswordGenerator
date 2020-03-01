@@ -35,9 +35,19 @@ function selectionfunc(countVar, optionchoice) {
 //Password Generation
 function generate() {
 password = ""; //Clears the password variable.
-for (let i = 0; i < password_length; i++) {
+for (let j = 0; j < capital_number; j++) {
+    password += letter_array[Math.floor(Math.random()*letter_array.length)].toUpperCase();
+}
+for (let k = 0; k < special_number; k++) {
+    password += special_array[Math.floor(Math.random()*special_array.length)];
+}
+for (let i = 0; i < password_length-(special_number+capital_number); i++) {
     password += letter_array[Math.floor(Math.random()*letter_array.length)];
 }
-
+for (let l = 0; l < 300; l++){
+    let random_selection = Math.floor(Math.random()*password.length);
+    password += password[random_selection];
+    password = password.substring(0, random_selection) + password.substring(random_selection + 1);
+}
 console.log(""+password);
 }
