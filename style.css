@@ -1,0 +1,22 @@
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(169deg, rgba(2,0,36,1) , rgba(68,68,68,1) );
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+  }
+
+.upper_margin {
+
+    color: white;
+    margin-top: 25%;
+    text-align: center;
+}
+
+#password_text {
+    margin-top: 3%;
+    color: red;
+}
+
+#refresh_button {
+    display:none;
+}
