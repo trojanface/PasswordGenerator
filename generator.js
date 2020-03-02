@@ -34,12 +34,9 @@ function selectionfunc(countVar, optionchoice) {
 
 //Password Generation
 function generate() {
-    var regen_button_var = document.getElementById("refresh_button");
-    if (regen_button_var.style.display === "none") {
-        regen_button_var.style.display = "block";
-    } 
+    document.getElementById("refresh_button").style.display = "inline"; //makes the regenerate button visible
     password = ""; //Clears the password variable.
-    document.getElementById("start_button").innerHTML = "Options";
+    document.getElementById("start_button").innerHTML = "Options"; //changes the text of the start button to options
     for (let j = 0; j < capital_number; j++) { //adds capital letters
         password += letter_array[Math.floor(Math.random() * letter_array.length)].toUpperCase();
     }

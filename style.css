@@ -12,8 +12,11 @@ body {
     text-align: center;
 }
 
-#password_text {
+.extra_spacing {
     margin-top: 3%;
+}
+
+#password_text {
     color: red;
 }
 
