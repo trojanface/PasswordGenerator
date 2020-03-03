@@ -24,15 +24,15 @@ let password = "";
 
 //User Input function
 function selectionfunc(countVar, optionchoice) {
-    if (optionchoice === "Capital") {
-        capital_number = countVar;
-        document.getElementById("capital_button").innerHTML = "" + countVar;
+    if (optionchoice === "Uppercase") {
+        capital_number = less_than_zero(capital_number, countVar);
+        document.getElementById("uppercase_text").innerHTML = "" + capital_number;
     } else if (optionchoice === "Special") {
-        special_number = countVar;
-        document.getElementById("special_button").innerHTML = "" + countVar;
+        special_number = less_than_zero(special_number, countVar);
+        document.getElementById("special_text").innerHTML = "" + special_number;
     } else if (optionchoice === "Number") {
-        number_number = countVar;
-        document.getElementById("number_button").innerHTML = "" + countVar;
+        number_number = less_than_zero(number_number, countVar);
+        document.getElementById("number_text").innerHTML = "" + number_number;
     } else {
         lowercase_number = less_than_zero(lowercase_number, countVar);
         document.getElementById("lowercase_text").innerHTML = "" + lowercase_number;
