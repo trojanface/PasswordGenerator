@@ -23,3 +23,7 @@ body {
 #refresh_button {
     display:none;
 }
+#invalid_warning {
+    color: red;
+    display:none;
+}

@@ -5,10 +5,11 @@
 
 
 //User options
-let password_length = 6;
+let password_length = 8;
+let lowercase_number = 4;
 let capital_number = 2;
 let special_number = 1;
-let number_number = 2;
+let number_number = 1;
 
 //Stored Data
 
@@ -31,8 +32,17 @@ function selectionfunc(countVar, optionchoice) {
         number_number = countVar;
         document.getElementById("number_button").innerHTML = "" + countVar;
     } else {
-        password_length = countVar;
-        document.getElementById("length_button").innerHTML = "" + countVar;
+        lowercase_number = countVar;
+        document.getElementById("lowercase_button").innerHTML = "" + countVar;
+    }
+    password_length = lowercase_number + capital_number +special_number + number_number;
+    document.getElementById("password_length_text").innerHTML = "" + password_length;
+    if (password_length < 8) {
+        document.getElementById("invalid_warning").style.display = "inline";
+        document.getElementById("generate_button").style.display = "none";
+    } else {
+        document.getElementById("generate_button").style.display = "inline";
+        document.getElementById("invalid_warning").style.display = "none";
     }
 }
 
@@ -50,7 +60,7 @@ function generate() {
     for (let k = 0; k < special_number; k++) { //adds special characters
         password += special_array[Math.floor(Math.random() * special_array.length)];
     }
-    for (let i = 0; i < password_length - (number_number + special_number + capital_number); i++) { //adds lowercase letters
+    for (let i = 0; i < lowercase_number; i++) { //adds lowercase letters
         password += letter_array[Math.floor(Math.random() * letter_array.length)];
     }
     for (let l = 0; l < 300; l++) { //scrambles the order

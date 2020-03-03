@@ -49,28 +49,28 @@
           </div>
           <div class="modal-body">
             <section>
-              <h3>Password Length</h3> <!--Lowercase menu-->
+              <h3>Lowercase Characters</h3> <!--Lowercase menu-->
               <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="length_button"
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="lowercase_button"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  6
+                  4
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" onclick="selectionfunc(3, 'Length')">3</a>
-                  <a class="dropdown-item" onclick="selectionfunc(4, 'Length')">4</a>
-                  <a class="dropdown-item" onclick="selectionfunc(5, 'Length')">5</a>
-                  <a class="dropdown-item" onclick="selectionfunc(6, 'Length')">6</a>
-                  <a class="dropdown-item" onclick="selectionfunc(7, 'Length')">7</a>
-                  <a class="dropdown-item" onclick="selectionfunc(8, 'Length')">8</a>
-                  <a class="dropdown-item" onclick="selectionfunc(9, 'Length')">9</a>
-                  <a class="dropdown-item" onclick="selectionfunc(10, 'Length')">10</a>
-                  <a class="dropdown-item" onclick="selectionfunc(11, 'Length')">11</a>
-                  <a class="dropdown-item" onclick="selectionfunc(12, 'Length')">12</a>
+                  <a class="dropdown-item" onclick="selectionfunc(0, 'Lowercase')">0</a>
+                  <a class="dropdown-item" onclick="selectionfunc(1, 'Lowercase')">1</a>
+                  <a class="dropdown-item" onclick="selectionfunc(2, 'Lowercase')">2</a>
+                  <a class="dropdown-item" onclick="selectionfunc(3, 'Lowercase')">3</a>
+                  <a class="dropdown-item" onclick="selectionfunc(4, 'Lowercase')">4</a>
+                  <a class="dropdown-item" onclick="selectionfunc(5, 'Lowercase')">5</a>
+                  <a class="dropdown-item" onclick="selectionfunc(6, 'Lowercase')">6</a>
+                  <a class="dropdown-item" onclick="selectionfunc(7, 'Lowercase')">7</a>
+                  <a class="dropdown-item" onclick="selectionfunc(8, 'Lowercase')">8</a>
+                  <a class="dropdown-item" onclick="selectionfunc(9, 'Lowercase')">9</a>
                 </div>
               </div>
             </section>
             <section>
-              <h3>Capitals</h3> <!--Capital menu-->
+              <h3>Uppercase Characters</h3> <!--Capital menu-->
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="capital_button"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -108,7 +108,7 @@
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="number_button"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  2
+                  1
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" onclick="selectionfunc(0, 'Number')">0</a>
@@ -124,10 +124,15 @@
                 </div>
               </div>
             </section>
+            <section>
+              <h3>Password Length</h3> <!--Length display-->
+              <h5 id="password_length_text">8</h5>
+            </section>
           </div>
           <div class="modal-footer">
-            <button type="button" onclick="generate()" data-dismiss="modal" class="btn btn-primary">Generate
+            <button type="button" id="generate_button" onclick="generate()" data-dismiss="modal" class="btn btn-primary">Generate
               Password</button>
+              <h5 id="invalid_warning">Password must be at least 8 characters long.</h5>
           </div>
         </div>
       </div>
