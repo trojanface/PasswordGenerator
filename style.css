@@ -27,3 +27,14 @@ body {
     color: red;
     display:none;
 }
+
+.inline_content {
+    display:inline;
+}
+
+.inline_content_text {
+    display:inline;
+    font-size: larger;
+    margin-left: 2%;
+    margin-right: 2%;
+}

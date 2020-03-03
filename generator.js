@@ -20,6 +20,8 @@ let special_array = ["\~", "\!", "\@", "\#", "\$", "\%", "\^", "\&", "\*"];
 //Password
 let password = "";
 
+
+
 //User Input function
 function selectionfunc(countVar, optionchoice) {
     if (optionchoice === "Capital") {
@@ -32,8 +34,9 @@ function selectionfunc(countVar, optionchoice) {
         number_number = countVar;
         document.getElementById("number_button").innerHTML = "" + countVar;
     } else {
-        lowercase_number = countVar;
-        document.getElementById("lowercase_button").innerHTML = "" + countVar;
+        lowercase_number = less_than_zero(lowercase_number, countVar);
+        document.getElementById("lowercase_text").innerHTML = "" + lowercase_number;
+        
     }
     password_length = lowercase_number + capital_number +special_number + number_number;
     document.getElementById("password_length_text").innerHTML = "" + password_length;
@@ -45,6 +48,19 @@ function selectionfunc(countVar, optionchoice) {
         document.getElementById("invalid_warning").style.display = "none";
     }
 }
+
+//Protect against going below zero function
+function less_than_zero (current,change) {
+    if (change < 0) {
+        if (current > 0) {
+        return current += change;
+        } else {
+           return current;
+        }
+    } else {
+        return current += change;
+    }
+   }
 
 //Password Generation
 function generate() {
