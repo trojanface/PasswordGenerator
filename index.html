@@ -108,7 +108,17 @@
             <section>
               <h3>Password Length</h3> <!--Length display-->
               <label for="customRange1">Example range</label>
-              <input type="range" min="0" max="128" class="custom-range" step="1" id="customRange1">
+
+
+              <div class="d-flex justify-content-center my-4">
+                <span class="font-weight-bold blue-text mr-2 mt-1">8</span>
+                <form class="range-field w-50">
+                  <input type="range" min="8" max="128" class="custom-range" value="8" step="1" id="customRange1">
+                </form>
+                <span class="font-weight-bold blue-text ml-2 mt-1">128</span>
+              </div>
+
+
               <h5 id="password_length_text">8</h5>
             </section>
           </div>
