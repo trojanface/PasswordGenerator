@@ -6,11 +6,6 @@
 
 //User options
 let password_length = 8;
-let lowercase_number = 4;
-let capital_number = 2;
-let special_number = 1;
-let number_number = 1;
-
 let use_lowercase = true;
 let use_uppercase = false;
 let use_special = false;
@@ -27,7 +22,7 @@ let special_array = ["\~", "\!", "\@", "\#", "\$", "\%", "\^", "\&", "\*"];
 let password = "";
 
 //HTML Element variables - to preserve performance.
-let uppercase_text_variable =  document.getElementById("uppercase_text");
+let uppercase_text_variable = document.getElementById("uppercase_text");
 let lowercase_text_variable = document.getElementById("lowercase_text");
 let special_text_variable = document.getElementById("special_text");
 let number_text_variable = document.getElementById("number_text");
@@ -45,16 +40,31 @@ function generate() {
     refresh_button.style.display = "inline"; //makes the regenerate button visible
     password = ""; //Clears the password variable.
     start_button.innerHTML = "Options"; //changes the text of the start button to options
-    for (let j = 0; j < capital_number; j++) { //adds capital letters
+
+    // take toggle values and generate random amounts to fit within the password length use array of 
+    //options and assign a number to each, randomly generate the number based on each option starting with at least 1.
+    // add these values to the password 
+    // scramble the password var
+    
+let percentage_split = [1,1,1,1];
+
+for (var i = 4; i < password_length; i++) {
+    percentage_split[Math.floor(Math.random()*percentage_split.length)]++;
+}
+
+    console.log(percentage_split);
+
+
+    for (let j = 0; j < percentage_split[0]; j++) { //adds capital letters
         password += letter_array[Math.floor(Math.random() * letter_array.length)].toUpperCase();
     }
-    for (let m = 0; m < number_number; m++) { //adds number
+    for (let m = 0; m < percentage_split[1]; m++) { //adds number
         password += number_array[Math.floor(Math.random() * number_array.length)];
     }
-    for (let k = 0; k < special_number; k++) { //adds special characters
+    for (let k = 0; k < percentage_split[2]; k++) { //adds special characters
         password += special_array[Math.floor(Math.random() * special_array.length)];
     }
-    for (let i = 0; i < lowercase_number; i++) { //adds lowercase letters
+    for (let i = 0; i < percentage_split[3]; i++) { //adds lowercase letters
         password += letter_array[Math.floor(Math.random() * letter_array.length)];
     }
     for (let l = 0; l < 300; l++) { //scrambles the order
