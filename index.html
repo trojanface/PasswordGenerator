@@ -49,39 +49,66 @@
           </div>
           <div class="modal-body">
             <section>
-              <h3>Lowercase Characters</h3> <!--Lowercase menu-->
-              <div>
+              <!--Lowercase menu-->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="lowercase_check">
+                <label class="form-check-label" for="defaultCheck1">
+                  Allow lowercase characters
+                </label>
+              </div>
+              
+              <!-- <div>
                 <button type="button" onclick="selectionfunc(1, 'Lowercase')" class="inline_content btn btn-primary">+</button>
                 <p id="lowercase_text" class="inline_content_text">4</p>
                 <button type="button" onclick="selectionfunc(-1, 'Lowercase')" class="inline_content btn btn-primary">-</button>
-              </div>
+              </div> -->
             </section>
             <section>
-              <h3>Uppercase Characters</h3> <!--Capital menu-->
-              <div>
+              <!--Uppercase menu-->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="uppercase_check">
+                <label class="form-check-label" for="defaultCheck1">
+                  Allow uppercase characters
+                </label>
+              </div>
+              <!-- <div>
                 <button type="button" onclick="selectionfunc(1, 'Uppercase')" class="inline_content btn btn-primary">+</button>
                 <p id="uppercase_text" class="inline_content_text">2</p>
                 <button type="button" onclick="selectionfunc(-1, 'Uppercase')" class="inline_content btn btn-primary">-</button>
-              </div>
+              </div> -->
             </section>
             <section>
-              <h3>Special Characters</h3> <!--Special Character menu-->
-              <div>
+              <!--Special Character menu-->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="special_check">
+                <label class="form-check-label" for="defaultCheck1">
+                  Allow special characters
+                </label>
+              </div>
+              <!-- <div>
                 <button type="button" onclick="selectionfunc(1, 'Special')" class="inline_content btn btn-primary">+</button>
                 <p id="special_text" class="inline_content_text">1</p>
                 <button type="button" onclick="selectionfunc(-1, 'Special')" class="inline_content btn btn-primary">-</button>
-              </div>
+              </div> -->
             </section>
             <section>
-              <h3>Numbers</h3> <!--Number menu-->
-              <div>
+              <!--Number menu-->
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="numbers_check">
+                <label class="form-check-label" for="defaultCheck1">
+                  Allow numbers
+                </label>
+              </div>
+              <!-- <div>
                 <button type="button" onclick="selectionfunc(1, 'Number')" class="inline_content btn btn-primary">+</button>
                 <p id="number_text" class="inline_content_text">1</p>
                 <button type="button" onclick="selectionfunc(-1, 'Number')" class="inline_content btn btn-primary">-</button>
-              </div>
+              </div> -->
             </section>
             <section>
               <h3>Password Length</h3> <!--Length display-->
+              <label for="customRange1">Example range</label>
+              <input type="range" min="0" max="128" class="custom-range" step="1" id="customRange1">
               <h5 id="password_length_text">8</h5>
             </section>
           </div>
