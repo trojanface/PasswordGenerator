@@ -12,6 +12,10 @@ body {
     text-align: center;
 }
 
+.center_content {
+    text-align: center;
+}
+
 .extra_spacing {
     margin-top: 3%;
 }
@@ -21,10 +25,6 @@ body {
 }
 
 #refresh_button {
-    display:none;
-}
-#invalid_warning {
-    color: red;
     display:none;
 }
 
