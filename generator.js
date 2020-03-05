@@ -1,9 +1,3 @@
-//button that when pressed will open options for your password generation
-//options suc as password length, capitals?, numbers? special characters?
-//button that generates the password.
-//algorithm that feeds the criteria and turns it into a random generator.
-
-
 //User options
 let password_length = 8;
 let boolean_array = [true, false, false, false];
@@ -39,13 +33,16 @@ refresh_button.addEventListener("click", generate);
 length_slider_variable.addEventListener("input", function () { password_length = length_slider_variable.value, length_text_variable.innerHTML = length_slider_variable.value });
 modal_bubble.addEventListener("click", error_check);
 
-function error_check () {
+//This functions checks that at least one checkbox has been selected
+function error_check() {
     let is_error = true;
+    //loops through the array of stored checkbox values and checks that at least one is true.
     for (var i = 0; i < boolean_array.length; i++) {
         if (boolean_array[i] == true) {
             is_error = false;
         }
     }
+    //throws an error in the options modal and removes the choice to proceed.
     if (is_error == true) {
         generate_button_variable.style.display = "none";
         warning_text.style.display = "inline";
@@ -61,11 +58,8 @@ function generate() {
     password = ""; //Clears the password variable.
     start_button.innerHTML = "Options"; //changes the text of the start button to options
 
-    // take toggle values and generate random amounts to fit within the password length use array of 
-    //options and assign a number to each, randomly generate the number based on each option starting with at least 1.
-    // add these values to the password 
-    // scramble the password var
-
+    //This calculates which of the four types of characters have been checked. Each array index corresponds to
+    //the same index in the boolean_array.
     let percentage_split = [0, 0, 0, 0];
     for (let i = 0; i < boolean_array.length; i++) {
         if (boolean_array[i] == true) {
@@ -74,7 +68,10 @@ function generate() {
 
     }
 
+    //This checks to ensure the sum of the new array is not 0. If it is 0 then we know no checkboxes have been ticked.
+    //Is an added defense against errors.
     if (percentage_split.reduce((a, b) => a + b, 0) != 0) {
+        //This loop randomly allocates how many of each character type is allowed to exist in the password.
         for (var i = (percentage_split.reduce((a, b) => a + b, 0)); i < password_length; i++) {
             let chosen_addition = Math.floor(Math.random() * percentage_split.length);
             if (boolean_array[chosen_addition] == true) {
@@ -84,7 +81,8 @@ function generate() {
             }
         }
 
-
+        //These loops add the characters into the password variable based upon how many they've been allocated by
+        //the above loop.
         for (let i = 0; i < percentage_split[0]; i++) { //adds lowercase letters
             password += letter_array[Math.floor(Math.random() * letter_array.length)];
         }
@@ -98,12 +96,12 @@ function generate() {
             password += number_array[Math.floor(Math.random() * number_array.length)];
         }
 
-
-        for (let l = 0; l < 300; l++) { //scrambles the order
+        for (let l = 0; l < 300; l++) { //scrambles the order of characters
             let random_selection = Math.floor(Math.random() * password.length);
             password += password[random_selection];
             password = password.substring(0, random_selection) + password.substring(random_selection + 1);
         }
+        //adds the password variable to the html element displayed to the user
         password_text_variable.innerHTML = password;
     } else {
         console.log("Nothing checked!");

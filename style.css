@@ -1,3 +1,4 @@
+/*Basic page styling*/
 body {
     background: rgb(2,0,36);
     background: linear-gradient(169deg, rgba(2,0,36,1) , rgba(68,68,68,1) );
@@ -6,7 +7,6 @@ body {
   }
 
 .upper_margin {
-
     color: white;
     margin-top: 25%;
     text-align: center;
@@ -21,15 +21,8 @@ body {
 }
 
 .emphasis_text {
+    word-wrap: break-word;
     color: red;
-}
-
-#refresh_button {
-    display:none;
-}
-
-#error_text {
-    display:none;
 }
 
 .inline_content {
@@ -41,4 +34,14 @@ body {
     font-size: larger;
     margin-left: 2%;
     margin-right: 2%;
+}
+
+/*These classes start off non existant but are used based on the current status of js variables.*/
+
+#refresh_button {
+    display:none;
+}
+
+#error_text {
+    display:none;
 }
