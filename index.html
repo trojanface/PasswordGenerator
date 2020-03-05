@@ -22,7 +22,7 @@
           <button type="button" class="btn btn-primary extra_spacing" id="start_button" data-toggle="modal" data-target="#exampleModalCenter">
             Start
           </button>
-          <button type="button" class="btn btn-primary extra_spacing" onclick="generate()" id="refresh_button">
+          <button type="button" class="btn btn-primary extra_spacing" id="refresh_button">
             Regenerate
           </button>
           <h2 id="password_text" class="extra_spacing"></h2>
@@ -113,7 +113,7 @@
               <div class="d-flex justify-content-center my-4">
                 <span class="font-weight-bold blue-text mr-2 mt-1">8</span>
                 <form class="range-field w-50">
-                  <input type="range" min="8" max="128" class="custom-range" value="8" step="1" id="customRange1">
+                  <input type="range" min="8" max="128" class="custom-range" value="8" step="1" id="password_length_slider">
                 </form>
                 <span class="font-weight-bold blue-text ml-2 mt-1">128</span>
               </div>
@@ -123,7 +123,7 @@
             </section>
           </div>
           <div class="modal-footer">
-            <button type="button" id="generate_button" onclick="generate()" data-dismiss="modal" class="btn btn-primary">Generate
+            <button type="button" id="generate_button" data-dismiss="modal" class="btn btn-primary">Generate
               Password</button>
           </div>
         </div>

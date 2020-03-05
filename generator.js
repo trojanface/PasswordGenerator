@@ -29,19 +29,20 @@ let lowercase_text_variable = document.getElementById("lowercase_check");
 let special_text_variable = document.getElementById("special_check");
 let number_text_variable = document.getElementById("numbers_check");
 let length_text_variable = document.getElementById("password_length_text");
+let length_slider_variable = document.getElementById("password_length_slider");
 let warning_text = document.getElementById("invalid_warning");
 let generate_button_variable = document.getElementById("generate_button");
 let password_text_variable = document.getElementById("password_text");
 let refresh_button = document.getElementById("refresh_button");
-let start_button = document.getElementById("start_button");
 
 //Event listeners
 lowercase_text_variable.addEventListener("click", function () {boolean_array[0] = !boolean_array[0]});
 uppercase_text_variable.addEventListener("click", function () {boolean_array[1] = !boolean_array[1]});
 special_text_variable.addEventListener("click", function () {boolean_array[2] = !boolean_array[2]});
 number_text_variable.addEventListener("click", function () {boolean_array[3] = !boolean_array[3]});
-// generate_button_variable.addEventListener("click", )
-
+generate_button_variable.addEventListener("click", generate);
+refresh_button.addEventListener("click", generate);
+length_slider_variable.addEventListener("input", function () {password_length = length_slider_variable.value, length_text_variable.innerHTML = length_slider_variable.value});
 
 //add dark mode
 
