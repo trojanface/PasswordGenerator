@@ -12,29 +12,29 @@
 
 <body>
   <section>
-    <!--Welcome-->
+    <!--Home page section-->
     <div class="container">
       <div class="row upper_margin">
         <div class="offset-md-3"></div>
+        <!--Centred title and start button-->
         <div class="col-md-6 ">
           <h1>Password Generator</h1>
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary extra_spacing" id="start_button" data-toggle="modal" data-target="#exampleModalCenter">
+          <!--Start button is replaced by options button after initial generation-->
+          <button type="button" class="btn btn-primary extra_spacing" id="start_button" data-toggle="modal"
+            data-target="#exampleModalCenter">
             Start
           </button>
+          <!--Regenerate button is initially invisible until user has generated first password.-->
           <button type="button" class="btn btn-primary extra_spacing" id="refresh_button">
             Regenerate
           </button>
-          <h2 id="password_text" class="extra_spacing"></h2>
+          <!--This is the text element that displays the password variable-->
+          <h2 id="password_text" class="extra_spacing emphasis_text"></h2>
         </div>
       </div>
     </div>
   </section>
   <section>
-    <!--Selections-->
-
-
-
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -47,73 +47,54 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
+          <div id="modal-body" class="modal-body">
             <section>
-              <!--Lowercase menu-->
+              <!--Lowercase checkbox-->
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="lowercase_check" checked>
                 <label class="form-check-label" for="defaultCheck1">
                   Allow lowercase characters
                 </label>
               </div>
-              
-              <!-- <div>
-                <button type="button" onclick="selectionfunc(1, 'Lowercase')" class="inline_content btn btn-primary">+</button>
-                <p id="lowercase_text" class="inline_content_text">4</p>
-                <button type="button" onclick="selectionfunc(-1, 'Lowercase')" class="inline_content btn btn-primary">-</button>
-              </div> -->
             </section>
             <section>
-              <!--Uppercase menu-->
+              <!--Uppercase checkbox-->
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="uppercase_check">
                 <label class="form-check-label" for="defaultCheck1">
                   Allow uppercase characters
                 </label>
               </div>
-              <!-- <div>
-                <button type="button" onclick="selectionfunc(1, 'Uppercase')" class="inline_content btn btn-primary">+</button>
-                <p id="uppercase_text" class="inline_content_text">2</p>
-                <button type="button" onclick="selectionfunc(-1, 'Uppercase')" class="inline_content btn btn-primary">-</button>
-              </div> -->
             </section>
             <section>
-              <!--Special Character menu-->
+              <!--Special Character checkbox-->
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="special_check">
                 <label class="form-check-label" for="defaultCheck1">
                   Allow special characters
                 </label>
               </div>
-              <!-- <div>
-                <button type="button" onclick="selectionfunc(1, 'Special')" class="inline_content btn btn-primary">+</button>
-                <p id="special_text" class="inline_content_text">1</p>
-                <button type="button" onclick="selectionfunc(-1, 'Special')" class="inline_content btn btn-primary">-</button>
-              </div> -->
             </section>
             <section>
-              <!--Number menu-->
+              <!--Number checkbox-->
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="numbers_check">
                 <label class="form-check-label" for="defaultCheck1">
                   Allow numbers
                 </label>
               </div>
-              <!-- <div>
-                <button type="button" onclick="selectionfunc(1, 'Number')" class="inline_content btn btn-primary">+</button>
-                <p id="number_text" class="inline_content_text">1</p>
-                <button type="button" onclick="selectionfunc(-1, 'Number')" class="inline_content btn btn-primary">-</button>
-              </div> -->
             </section>
             <section>
-              <h3>Password Length</h3> <!--Length display-->
-
+              <!--Length section-->
+              <h3>Password Length</h3>
+              <!--Displays the currently set password length-->
               <h5 id="password_length_text" class="center_content">8</h5>
-
+              <!--This slider enables user to change the length of the password-->
               <div class="d-flex justify-content-center my-4">
                 <span class="font-weight-bold blue-text mr-2 mt-1">8</span>
                 <form class="range-field w-50">
-                  <input type="range" min="8" max="128" class="custom-range" value="8" step="1" id="password_length_slider">
+                  <input type="range" min="8" max="128" class="custom-range" value="8" step="1"
+                    id="password_length_slider">
                 </form>
                 <span class="font-weight-bold blue-text ml-2 mt-1">128</span>
               </div>
@@ -125,13 +106,14 @@
           <div class="modal-footer">
             <button type="button" id="generate_button" data-dismiss="modal" class="btn btn-primary">Generate
               Password</button>
+            <h5 id="error_text" class="emphasis_text">You must select at least one character type</h5>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-<!--Scripts-->
+  <!--Scripts-->
   <script src="generator.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

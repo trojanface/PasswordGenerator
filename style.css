@@ -20,11 +20,15 @@ body {
     margin-top: 3%;
 }
 
-#password_text {
+.emphasis_text {
     color: red;
 }
 
 #refresh_button {
+    display:none;
+}
+
+#error_text {
     display:none;
 }
 
