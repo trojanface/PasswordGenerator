@@ -7,7 +7,7 @@ This is a useful application to generate a pseudo-random password based on user 
 [View here](https://trojanface.github.io/PasswordGenerator/)
 
 # Screenshot
-![An image of the homepage of my Password generating website.](Screenshot.png)
+![An image of the homepage of my Password generating website.](./Screenshot.png)
 
 # Credits
 HTML, CSS & JS by Matthew Teague
